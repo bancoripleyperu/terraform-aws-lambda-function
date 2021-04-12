@@ -2,7 +2,7 @@ module "this" {
   source = "../../"
 
   function_name = random_string.this.result
-  source_dir      = "./code/"
+  source_dir    = "./code/"
   handler       = "lambda_function.lambda_handler"
   runtime       = "python2.7"
   role          = module.iam-role.values.arn

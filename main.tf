@@ -36,6 +36,6 @@ resource "aws_lambda_function" "this" {
 
 data "archive_file" "this" {
   type        = "zip"
-  source_dir = var.source_dir
+  source_dir  = var.source_dir
   output_path = "${var.source_dir}/code.zip"
 }

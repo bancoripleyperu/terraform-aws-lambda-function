@@ -74,7 +74,7 @@ variable "environment" {
 
 variable "vpc_config" {
   description = "Provide this to allow your function to access your VPC. Fields documented below. See Lambda in VPC."
-  type        = object({
+  type = object({
     security_group_ids = list(string)
     subnet_ids         = list(string)
   })
