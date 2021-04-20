@@ -1,6 +1,6 @@
 resource "aws_lambda_function" "this" {
   function_name                  = var.function_name
-  filename                       = "${var.source_dir}/code.zip"
+  filename                       = var.filename
   description                    = var.description
   role                           = var.role
   handler                        = var.handler
@@ -9,7 +9,7 @@ resource "aws_lambda_function" "this" {
   memory_size                    = var.memory_size
   reserved_concurrent_executions = var.reserved_concurrent_executions
   timeout                        = var.timeout
-  source_code_hash               = filebase64sha256("${var.source_dir}/code.zip")
+  source_code_hash               = filebase64sha256(var.filename)
   layers                         = var.layers
 
   tracing_config {
@@ -32,10 +32,4 @@ resource "aws_lambda_function" "this" {
   }
 
   tags = var.tags
-}
-
-data "archive_file" "this" {
-  type        = "zip"
-  source_dir  = var.source_dir
-  output_path = "${var.source_dir}/code.zip"
 }
