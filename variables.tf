@@ -3,8 +3,8 @@ variable "function_name" {
   type        = string
 }
 
-variable "source_dir" {
-  description = "The source dir the function"
+variable "filename" {
+  description = "The filename of the function"
   type        = string
 }
 
