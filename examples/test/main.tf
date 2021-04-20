@@ -2,7 +2,7 @@ module "this" {
   source = "../../"
 
   function_name = random_string.this.result
-  filename      = "${var.source_dir}/code.zip"
+  filename      = "./code/code.zip"
   handler       = "lambda_function.lambda_handler"
   runtime       = "python2.7"
   role          = module.iam-role.values.arn
@@ -12,14 +12,14 @@ module "this" {
   }
 
   depends_on = [
-    data.archive_file
+    data.archive_file.this
   ]
 }
 
 data "archive_file" "this" {
   type        = "zip"
-  source_dir  = var.source_dir
-  output_path = "${var.source_dir}/code.zip"
+  source_dir  = "./code/"
+  output_path = "./code/code.zip"
 }
 
 resource "random_string" "this" {
