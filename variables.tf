@@ -9,6 +9,12 @@ variable "filename" {
   default     = null
 }
 
+variable "source_code_hash" {
+  description = "The source code hash of the function"
+  type        = string
+  default     = null
+}
+
 variable "s3_bucket" {
   description = "The s3 bucket of the package"
   type        = string

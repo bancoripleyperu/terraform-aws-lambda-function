@@ -11,7 +11,7 @@ resource "aws_lambda_function" "this" {
   memory_size                    = var.memory_size
   reserved_concurrent_executions = var.reserved_concurrent_executions
   timeout                        = var.timeout
-  source_code_hash               = filebase64sha256(var.filename)
+  source_code_hash               = var.source_code_hash
   layers                         = var.layers
 
   tracing_config {
