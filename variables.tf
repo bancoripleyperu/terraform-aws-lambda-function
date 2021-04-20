@@ -6,6 +6,19 @@ variable "function_name" {
 variable "filename" {
   description = "The filename of the function"
   type        = string
+  default     = null
+}
+
+variable "s3_bucket" {
+  description = "The s3 bucket of the package"
+  type        = string
+  default     = null
+}
+
+variable "s3_key" {
+  description = "The s3 key of the package"
+  type        = string
+  default     = null
 }
 
 variable "description" {

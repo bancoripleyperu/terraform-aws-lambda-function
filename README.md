@@ -43,7 +43,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_description"></a> [description](#input\_description) | (Optional) The description of the function | `string` | `null` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | The Lambda environment's configuration settings. | `map(string)` | `null` | no |
-| <a name="input_filename"></a> [filename](#input\_filename) | The filename of the function | `string` | n/a | yes |
+| <a name="input_filename"></a> [filename](#input\_filename) | The filename of the function | `string` | `null` | no |
 | <a name="input_function_name"></a> [function\_name](#input\_function\_name) | The name of the function | `string` | n/a | yes |
 | <a name="input_handler"></a> [handler](#input\_handler) | The handler of the function | `string` | n/a | yes |
 | <a name="input_layers"></a> [layers](#input\_layers) | The layers of the function | `list(string)` | `[]` | no |
@@ -52,6 +52,8 @@ No modules.
 | <a name="input_reserved_concurrent_executions"></a> [reserved\_concurrent\_executions](#input\_reserved\_concurrent\_executions) | The reserved concurrent executions | `string` | `null` | no |
 | <a name="input_role"></a> [role](#input\_role) | The arn role | `string` | `null` | no |
 | <a name="input_runtime"></a> [runtime](#input\_runtime) | The runtime of the function | `string` | n/a | yes |
+| <a name="input_s3_bucket"></a> [s3\_bucket](#input\_s3\_bucket) | The s3 bucket of the package | `string` | `null` | no |
+| <a name="input_s3_key"></a> [s3\_key](#input\_s3\_key) | The s3 key of the package | `string` | `null` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | (Optional) A mapping of tags to assign to the function. | `map(string)` | `{}` | no |
 | <a name="input_timeout"></a> [timeout](#input\_timeout) | The timeout of the function | `number` | `3` | no |
 | <a name="input_tracing_config_mode"></a> [tracing\_config\_mode](#input\_tracing\_config\_mode) | The tracing config mode | `string` | `"PassThrough"` | no |
